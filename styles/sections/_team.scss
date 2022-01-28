@@ -1,0 +1,71 @@
+.team {
+  padding: 5rem 0;
+
+  &__list {
+    @include inline-list;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2.5rem;
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+
+    @include device(mobileAndTablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.member {
+  @include flex(flex-start);
+
+  &__image {
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    border-radius: $roundness * 0.5;
+    overflow: hidden;
+  }
+
+  &__content {
+    @include flex(flex-start, flex-start, $direction: column);
+    padding: 0 0 0 1rem;
+    align-self: stretch;
+  }
+
+  &__name {
+    @include font-size(h5);
+    @include flex(flex-start);
+    vertical-align: baseline;
+  }
+
+  &__role {
+    @include font-size(p);
+    color: rgba(color(text), 0.7);
+    margin: 0 0 0 0.25em;
+  }
+
+  &__links {
+    @include flex(flex-start);
+    @include inline-list;
+    margin-left: -0.5em;
+    margin-top: 0.25em;
+  }
+
+  &__link {
+    @include flex(flex-start);
+    @include font-size(small);
+    font-weight: 500;
+    margin: 0.5em;
+
+    svg {
+      width: 1em;
+      height: auto;
+      margin-right: 0.5em;
+    }
+
+    &:hover {
+      color: color(main);
+      text-decoration: underline;
+    }
+  }
+}

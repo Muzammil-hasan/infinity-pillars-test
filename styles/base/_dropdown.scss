@@ -1,0 +1,74 @@
+.#{$global-prefix}_dropdown {
+  width: 100%;
+  position: relative;
+
+  &__trigger {
+    @include flex(flex-start);
+    position: relative;
+    width: 100%;
+    border: 0.1em solid rgba(color(text), 0.1);
+    background-color: transparent;
+    color: color(text);
+    height: 3rem;
+    border-radius: $roundness * 0.5;
+    padding: 0 1rem;
+
+    &[aria-expanded="true"] {
+      border-radius: $roundness * 0.5 $roundness * 0.5 0 0;
+      border-bottom: 0;
+    }
+
+    > svg {
+      margin-right: 0.5rem;
+      height: 1em;
+      width: auto;
+    }
+  }
+
+  &__content {
+    @include inline-list;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background-color: color(background);
+    border: 0.1em solid rgba(color(text), 0.1);
+    border-top: 0;
+    border-radius: 0 0 $roundness * 0.5 $roundness * 0.5;
+    padding: 0.5em;
+  }
+
+  &__item {
+    @include font-size(small);
+    @include flex(flex-start);
+    font-weight: 500;
+    padding: 0.5em 1em;
+    border-radius: $roundness * 0.5;
+    margin: 0.5em 0;
+
+    &.active {
+      background-color: rgba(color(text), 0.1);
+    }
+
+    &[aria-selected="true"] {
+      color: rgba(color(text), 0.7);
+    }
+
+    svg {
+      width: 1em;
+      height: 1em;
+      margin-right: 0.5em;
+      margin-left: -0.5em;
+    }
+  }
+
+  &__indicator {
+    margin-left: auto;
+    padding-left: 0.5rem;
+
+    svg {
+      height: 1em;
+      width: auto;
+    }
+  }
+}

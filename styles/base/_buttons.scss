@@ -1,0 +1,102 @@
+.#{$global-prefix}_button {
+  @include font-size(p);
+  @include flex(center, $type: inline-flex);
+  padding: 0.75em 1.4em;
+  font-weight: 600;
+  border: 0;
+  cursor: pointer;
+  transition: all 400ms easing(out-expo);
+  border-radius: 0.5em;
+  line-height: 1;
+
+  svg {
+    width: 1em;
+    height: 1em;
+    margin-left: 0.5em;
+  }
+
+  &:disabled {
+    opacity: 0.7;
+  }
+
+  &--primary {
+    @extend .#{$global-prefix}_button;
+    background-color: color(main);
+    color: color(text);
+
+    &:hover {
+      background-color: darken(color(main), 5%);
+    }
+  }
+
+  &--secondary {
+    @extend .#{$global-prefix}_button;
+    background-color: rgba(color(text), 0.05);
+    color: color(text);
+
+    &:hover {
+      background-color: rgba(color(text), 0.2);
+    }
+  }
+
+  &--full-width {
+    width: 100%;
+  }
+}
+
+.#{$global-prefix}_button_icon {
+  @include flex(center);
+  border: 0;
+  cursor: pointer;
+  border-radius: 100%;
+  width: 2.5em;
+  height: 2.5em;
+
+  svg {
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  &--primary {
+    @extend .#{$global-prefix}_button_icon;
+    background-color: color(main);
+    color: color(text);
+
+    &:hover {
+      background-color: darken(color(main), 5%);
+    }
+  }
+}
+
+.#{$global-prefix}_button-link {
+  @include font-size(p);
+  @include flex(flex-start);
+  font-weight: 600;
+  border: 0;
+  cursor: pointer;
+  transition: all 400ms easing(out-expo);
+
+  svg {
+    width: 1em;
+    height: 1em;
+    margin-left: 0.5em;
+  }
+
+  &:disabled {
+    opacity: 0.7;
+  }
+
+  &:hover {
+    color: color(main);
+  }
+
+  &--primary {
+    @extend .#{$global-prefix}_button-link;
+    color: color(main);
+  }
+
+  &--secondary {
+    @extend .#{$global-prefix}_button-link;
+    color: color(text);
+  }
+}

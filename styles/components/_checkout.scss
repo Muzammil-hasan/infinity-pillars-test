@@ -1,0 +1,19 @@
+.checkout {
+  &_confirming {
+    @include flex(center, $direction: column);
+    padding: 2.5rem 0;
+
+    > svg {
+      width: 2rem;
+      height: auto;
+      z-index: 10;
+      margin: -1rem 0 0 -1rem;
+      animation: rotate 500ms linear infinite;
+    }
+
+    > p {
+      margin-top: 1rem;
+      font-weight: 500;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.page_about {
+  padding: 2.5rem $page-padding;
+  background-color: color(background);
+  min-height: 100vh;
+
+  > h2 {
+    margin-top: 2.5rem;
+  }
+
+  &__intro {
+    @include font-size(h5);
+    color: rgba(color(text), 0.7);
+  }
+}

@@ -1,0 +1,12 @@
+.page_dashboard {
+  padding: 2.5rem $page-padding;
+
+  &__title {
+    @include flex(space-between);
+  }
+
+  &__section-title {
+    @include font-size(h3);
+    margin: 5rem 0 1rem 0;
+  }
+}

@@ -1,0 +1,41 @@
+.#{$global-prefix}_tablist {
+  @include flex(flex-start, $wrap: nowrap);
+  @include inline-list;
+  @include font-size(p);
+  margin-left: -0.5em;
+  font-weight: 500;
+
+  &__scrollbar {
+    width: 100%;
+    height: 0.2em;
+
+    &-thumb {
+      background-color: rgba(color(text), 0.1);
+      height: 0.2em;
+      --radix-scroll-area-thumb-height: 0.2em;
+    }
+  }
+}
+
+.#{$global-prefix}_tab {
+  @include flex(flex-start, $wrap: nowrap);
+  padding: 0.5em 1em;
+  border-radius: $roundness * 0.5;
+  margin: 0.5em;
+  flex-shrink: 0;
+  white-space: nowrap;
+
+  &__icon {
+    @include flex(center);
+
+    svg {
+      width: 1em;
+      height: auto;
+      margin-right: 0.5em;
+    }
+  }
+
+  &.active {
+    background-color: rgba(color(text), 0.1);
+  }
+}

@@ -1,0 +1,46 @@
+.footer {
+  @include flex(space-between);
+  @include font-size(small);
+  font-weight: 500;
+  padding: 2.5rem $page-padding;
+  border-top: 0.1em solid rgba(color(text), 0.05);
+
+  svg {
+    height: 1rem;
+    width: auto;
+  }
+
+  &__logo {
+    @include flex(flex-start);
+    width: 30%;
+  }
+
+  &__notice {
+    @include flex(center);
+    width: 40%;
+  }
+
+  &__nav {
+    width: 30%;
+
+    ul {
+      @include flex(flex-end);
+      @include inline-list;
+      width: 100%;
+    }
+  }
+
+  @include device(mobile) {
+    &__logo,
+    &__notice,
+    &__nav,
+    &__nav ul {
+      justify-content: center;
+      width: 100%;
+    }
+
+    &__notice {
+      margin: 1.5rem 0;
+    }
+  }
+}

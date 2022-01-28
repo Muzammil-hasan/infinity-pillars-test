@@ -1,0 +1,51 @@
+.header {
+  @include flex(center);
+  height: $header-height;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 0 $page-padding;
+  border-bottom: 0.05em solid transparent;
+  transition: all 400ms easing(out-expo);
+
+  &.not-top {
+    background-color: color(background);
+    border-bottom-color: rgba(color(text), 0.05);
+  }
+
+  &__logo {
+    @extend .flex-start;
+    width: auto;
+    margin-right: auto;
+
+    a {
+      @include font-size(h3);
+      display: block;
+      text-transform: uppercase;
+      font-family: font(heading);
+    }
+
+    svg {
+      height: 1.5rem;
+      width: auto;
+    }
+  }
+
+  &__ctas {
+    @include flex(space-between);
+    margin-left: auto;
+
+    .#{$global-prefix}_button--primary,
+    .#{$global-prefix}_button_icon--primary {
+      margin-left: 1em;
+    }
+  }
+
+  @include device(mobileAndTablet) {
+    & {
+      padding: 0 $mobile-page-padding;
+    }
+  }
+}

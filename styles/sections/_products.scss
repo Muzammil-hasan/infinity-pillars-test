@@ -1,0 +1,114 @@
+.products {
+  padding: 2.5rem 0;
+  width: 100%;
+
+  &__list {
+    @extend .inline-list;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5rem;
+    gap: 5rem;
+    margin-top: 2.5rem;
+
+    @include device(mobile) {
+      grid-template-columns: 1fr;
+    }
+
+    @include device(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__title {
+    margin-bottom: 2.5rem;
+  }
+
+  &_item {
+    width: 100%;
+    border-radius: 0.5em;
+    border: 0.1em solid rgba(color(text), 0.1);
+    overflow: hidden;
+    transition: box-shadow 400ms easing(out-expo);
+
+    &__image {
+      width: 100%;
+      height: 17.5rem;
+      overflow: hidden;
+      display: block;
+    }
+
+    &__title {
+      @include flex(baseline);
+      @include font-size(h5);
+      font-weight: 500;
+    }
+
+    &__variant {
+      @include font-size(small);
+      background-color: rgba(color(text), 0.05);
+      padding: 0.25em 0.5em;
+      border-radius: $roundness * 0.5;
+      margin-left: 0.5em;
+    }
+
+    &__description {
+      @include font-size(p);
+      opacity: 0.7;
+    }
+
+    &__content {
+      padding: 1.5rem;
+    }
+
+    &__foot {
+      @include flex(space-between, last baseline);
+      padding: 1.5rem 0 0 0;
+      margin-top: auto;
+    }
+
+    &__price {
+      @include flex(flex-start, $direction: column);
+
+      &-label {
+        @include font-size(small);
+        width: 100%;
+        margin-bottom: 0.25em;
+      }
+
+      &-value {
+        font-weight: 600;
+      }
+    }
+
+    &:hover {
+      box-shadow: 0 0 2em darken(color(background), 5%);
+    }
+
+    &__categories {
+      @include inline-list;
+      @include flex(flex-start);
+      margin-top: 1rem;
+    }
+
+    &__category {
+      @include font-size(small);
+      @include flex(flex-start);
+      padding: 0.25em 1em 0.25em 0.5em;
+      border-radius: $roundness;
+      font-weight: 500;
+
+      &-icon {
+        @include flex(center);
+        width: 1em;
+        height: 1em;
+        border-radius: 100%;
+        margin-right: 0.5em;
+
+        svg {
+          width: 0.5em;
+          height: auto;
+        }
+      }
+    }
+  }
+}
