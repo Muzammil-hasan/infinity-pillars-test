@@ -19,6 +19,9 @@ $colors: (
 	"main": #1a73e8,
 	"text": #232830,
 	"background": #ffffff,
+	"gmail": #fff0f0,
+	"github": #e3e3e3,
+	"linkedin": #e5f1f8,
 );
 
 /*
@@ -60,8 +63,8 @@ Others
 ===================
 */
 
-$global-prefix: "redoxbird";
-$page-padding: 5vw;
+$global-prefix: "portfolio";
+$page-padding: 2vw;
 $mobile-page-padding: 6vw;
 $header-height: 5rem;
 $section-padding: 10vw;

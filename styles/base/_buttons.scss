@@ -1,102 +1,129 @@
 .#{$global-prefix}_button {
-  @include font-size(p);
-  @include flex(center, $type: inline-flex);
-  padding: 0.75em 1.4em;
-  font-weight: 600;
-  border: 0;
-  cursor: pointer;
-  transition: all 400ms easing(out-expo);
-  border-radius: 0.5em;
-  line-height: 1;
+	@include font-size(p);
+	@include flex(center, $type: inline-flex);
+	padding: 0.75em 3em;
+	font-weight: 600;
+	border: 0;
+	cursor: pointer;
+	transition: all 400ms easing(out-expo);
+	border-radius: 0.2em;
+	line-height: 1;
 
-  svg {
-    width: 1em;
-    height: 1em;
-    margin-left: 0.5em;
-  }
+	svg {
+		width: 1em;
+		height: 1em;
+		margin-left: 0.5em;
+	}
 
-  &:disabled {
-    opacity: 0.7;
-  }
+	&:disabled {
+		opacity: 0.7;
+	}
 
-  &--primary {
-    @extend .#{$global-prefix}_button;
-    background-color: color(main);
-    color: color(text);
+	&--primary {
+		@extend .#{$global-prefix}_button;
+		background-color: color(main);
+		color: color(background);
+		text-transform: uppercase;
 
-    &:hover {
-      background-color: darken(color(main), 5%);
-    }
-  }
+		&:hover {
+			background-color: darken(color(main), 5%);
+		}
+	}
 
-  &--secondary {
-    @extend .#{$global-prefix}_button;
-    background-color: rgba(color(text), 0.05);
-    color: color(text);
+	&--secondary {
+		@extend .#{$global-prefix}_button;
+		background-color: rgba(color(text), 0.08);
+		color: color(text);
 
-    &:hover {
-      background-color: rgba(color(text), 0.2);
-    }
-  }
+		&:hover {
+			background-color: rgba(color(text), 0.2);
+		}
+	}
 
-  &--full-width {
-    width: 100%;
-  }
+	&--small {
+		padding: 0.75em 1.4em;
+	}
 }
 
 .#{$global-prefix}_button_icon {
-  @include flex(center);
-  border: 0;
-  cursor: pointer;
-  border-radius: 100%;
-  width: 2.5em;
-  height: 2.5em;
+	@include flex(center);
+	border: 0;
+	cursor: pointer;
+	border-radius: 100%;
+	width: 6em;
+	height: 6em;
 
-  svg {
-    width: 1.5em;
-    height: 1.5em;
-  }
+	svg {
+		width: 2.25em;
+		height: 2.25em;
+	}
 
-  &--primary {
-    @extend .#{$global-prefix}_button_icon;
-    background-color: color(main);
-    color: color(text);
+	&--primary {
+		@extend .#{$global-prefix}_button_icon;
+		background-color: color(main);
+		color: color(text);
 
-    &:hover {
-      background-color: darken(color(main), 5%);
-    }
-  }
+		&:hover {
+			background-color: darken(color(main), 5%);
+		}
+	}
+
+	&--gmail {
+		background-color: color(gmail);
+		position: absolute;
+		top: 10rem;
+		left: 6rem;
+	}
+
+	&--github {
+		background-color: rgba(color(text), 0.08);
+		position: absolute;
+		top: 25rem;
+		left: 15rem;
+
+		svg {
+			width: 3em;
+			height: 3em;
+		}
+	}
+
+	&--linkedin {
+		background-color: color(linkedin);
+		position: absolute;
+		top: 18rem;
+		right: 10rem;
+	}
 }
 
 .#{$global-prefix}_button-link {
-  @include font-size(p);
-  @include flex(flex-start);
-  font-weight: 600;
-  border: 0;
-  cursor: pointer;
-  transition: all 400ms easing(out-expo);
+	@include font-size(p);
+	@include flex(flex-start);
+	font-weight: 600;
+	border: 0;
+	cursor: pointer;
+	transition: all 400ms easing(out-expo);
 
-  svg {
-    width: 1em;
-    height: 1em;
-    margin-left: 0.5em;
-  }
+	svg {
+		width: 1em;
+		height: 1em;
+		margin-left: 0.5em;
+	}
 
-  &:disabled {
-    opacity: 0.7;
-  }
+	&:disabled {
+		opacity: 0.7;
+	}
 
-  &:hover {
-    color: color(main);
-  }
+	&:hover {
+		color: color(main);
+	}
 
-  &--primary {
-    @extend .#{$global-prefix}_button-link;
-    color: color(main);
-  }
+	&--primary {
+		@extend .#{$global-prefix}_button-link;
+		color: color(main);
+	}
 
-  &--secondary {
-    @extend .#{$global-prefix}_button-link;
-    color: color(text);
-  }
+	&--secondary {
+		@extend .#{$global-prefix}_button-link;
+		color: color(text);
+	}
 }

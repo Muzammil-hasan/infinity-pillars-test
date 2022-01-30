@@ -1,21 +1,21 @@
 body {
-  background-color: color(background);
-  color: color(text);
-  font-family: font(body);
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  box-sizing: border-box;
+	background-color: color(background);
+	color: color(text);
+	font-family: font(body);
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	box-sizing: border-box;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 a {
-  text-decoration: none;
-  color: color(text);
-  text-underline-offset: 0.1em;
+	text-decoration: none;
+	color: color(text);
+	text-underline-offset: 0.1em;
 }
 
 h1,
@@ -24,24 +24,24 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0;
+	margin: 0;
 }
 
 p {
-  margin: 0;
+	margin: 0;
 }
 
 img {
-  width: 100%;
-  height: auto;
+	width: 100%;
+	height: auto;
 }
 
 main {
-  margin-top: $header-height;
+	// margin-top: $header-height;
 }
 
 button,
 a[href],
 input[type="submit"] {
-  cursor: pointer;
+	cursor: pointer;
 }
