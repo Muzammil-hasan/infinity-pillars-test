@@ -2,12 +2,13 @@
 	@include font-size(p);
 	@include flex(center, $type: inline-flex);
 	padding: 0.75em 3em;
-	font-weight: 600;
+	font-weight: 500;
 	border: 0;
 	cursor: pointer;
 	transition: all 400ms easing(out-expo);
 	border-radius: 0.2em;
 	line-height: 1;
+	letter-spacing: 0.05em;
 
 	svg {
 		width: 1em;
@@ -23,7 +24,6 @@
 		@extend .#{$global-prefix}_button;
 		background-color: color(main);
 		color: color(background);
-		text-transform: uppercase;
 
 		&:hover {
 			background-color: darken(color(main), 5%);
@@ -32,16 +32,20 @@
 
 	&--secondary {
 		@extend .#{$global-prefix}_button;
-		background-color: rgba(color(text), 0.08);
-		color: color(text);
+		background: none;
+		color: color(main);
+		border: 1px solid color(main);
 
 		&:hover {
-			background-color: rgba(color(text), 0.2);
+			background-color: rgba(color(text), 0.08);
 		}
 	}
 
 	&--small {
-		padding: 0.75em 1.4em;
+		@include font-size(h6);
+		padding: 0.8em 1.25em;
+		font-weight: 400;
+		text-transform: capitalize;
 	}
 }
 
@@ -50,8 +54,11 @@
 	border: 0;
 	cursor: pointer;
 	border-radius: 100%;
-	width: 6em;
-	height: 6em;
+
+	span {
+		width: 6em;
+		height: 6em;
+	}
 
 	svg {
 		width: 2.25em;
@@ -68,12 +75,15 @@
 		}
 	}
 
-	&--gmail {
-		background-color: color(gmail);
-		position: absolute;
-		top: 10rem;
-		left: 6rem;
-	}
+	// &--gmail {
+	// 	top: 10rem;
+	// 	left: 6rem;
+
+	// 	span {
+	// 		position: absolute;
+	// 		background-color: color(gmail);
+	// 	}
+	// }
 
 	&--github {
 		background-color: rgba(color(text), 0.08);
@@ -92,6 +102,10 @@
 		position: absolute;
 		top: 18rem;
 		right: 10rem;
+	}
+
+	&:hover {
+		transform: scale(1.1);
 	}
 }
 

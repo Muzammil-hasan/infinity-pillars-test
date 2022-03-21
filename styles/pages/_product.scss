@@ -1,5 +1,5 @@
 .page-product {
-  padding: 2.5rem $page-padding 5rem;
+  padding: 2.5rem padding(page) 5rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2.5rem;

@@ -1,5 +1,5 @@
 import React from "react";
-import { links } from "@context/nav";
+import { links } from "../context/nav";
 
 const Nav = () => {
 	return (

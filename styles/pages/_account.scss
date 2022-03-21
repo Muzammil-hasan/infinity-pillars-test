@@ -1,6 +1,6 @@
 .page-account {
   @include flex(center);
-  padding: 2.5rem $page-padding 5rem;
+  padding: 2.5rem padding(page) 5rem;
 
   &__form {
     width: 28rem;

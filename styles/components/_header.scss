@@ -1,5 +1,13 @@
 .header {
-	@include flex(space-between);
-	height: $header-height;
-	padding: 0 $page-padding;
+  @include flex(space-between);
+  height: $header-height;
+  padding: 0 padding(header);
+
+  &__ctas {
+    @include flex(center);
+
+    > a:last-child {
+      margin-left: 0.75em;
+    }
+  }
 }

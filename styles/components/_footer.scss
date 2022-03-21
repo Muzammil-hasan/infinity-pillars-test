@@ -2,7 +2,7 @@
   @include flex(space-between);
   @include font-size(small);
   font-weight: 500;
-  padding: 2.5rem $page-padding;
+  padding: 2.5rem padding(page);
   border-top: 0.1em solid rgba(color(text), 0.05);
 
   svg {

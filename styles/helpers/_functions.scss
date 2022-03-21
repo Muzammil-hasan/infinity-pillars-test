@@ -3,7 +3,7 @@
     @return map-get($easing, $key);
   }
 
-  @warn "Unkown '#{$key}' in $easing.";
+  @warn "Unknown '#{$key}' in $easing.";
   @return null;
 }
 
@@ -12,7 +12,16 @@
     @return map-get($fonts, $key);
   }
 
-  @warn "Unkown '#{$key}' in $fonts.";
+  @warn "Unknown '#{$key}' in $fonts.";
+  @return null;
+}
+
+@function padding($key) {
+  @if map-has-key($padding, $key) {
+    @return map-get($padding, $key);
+  }
+
+  @warn "Unknown '#{$key}' in $padding.";
   @return null;
 }
 
@@ -21,7 +30,7 @@
     @return map-get($colors, $key);
   }
 
-  @warn "Unkown '#{$key}' in $colors.";
+  @warn "Unknown '#{$key}' in $colors.";
   @return null;
 }
 

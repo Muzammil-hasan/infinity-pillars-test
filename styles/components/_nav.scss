@@ -1,95 +1,96 @@
 .header__nav {
-	&__list {
-		@extend .inline-list;
-		@extend .flex-center;
+  &__list {
+    @extend .inline-list;
+    @extend .flex-center;
 
-		&-item {
-			position: relative;
+    &-item {
+      position: relative;
 
-			a {
-				@include font-size(h6);
-				position: relative;
-				display: block;
-				text-transform: capitalize;
-				text-underline-offset: 0.5em;
-				font-weight: 500;
+      a {
+        @include font-size(p);
+        position: relative;
+        display: block;
+        text-transform: capitalize;
+        text-underline-offset: 0.5em;
+        font-weight: 300;
+        letter-spacing: 0.05em;
 
-				&.active {
-					color: color(text);
-					text-decoration: underline;
-				}
-			}
+        &.active {
+          color: color(text);
+          text-decoration: underline;
+        }
+      }
 
-			&:not(:last-child) {
-				margin-right: 2rem;
-			}
-		}
-	}
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+    }
+  }
 
-	@include device(mobileAndTablet) {
-		display: none;
-	}
+  @include device(mobileAndTablet) {
+    display: none;
+  }
 }
 
 .nav--mobile {
-	position: relative;
+  position: relative;
 
-	&__list {
-		@include inline-list;
-		padding: 1rem 0.5rem;
-		background-color: color(text);
-		color: color(background);
-		border-radius: $roundness * 0.5;
-		border: 0.1em solid rgba(color(background), 0.1);
-		z-index: 1000;
-		opacity: 0;
-		animation: nav--mobile__content 400ms easing(out-expo) forwards;
-		transform-origin: top right;
-		position: absolute;
-		top: 100%;
-		right: 2rem;
+  &__list {
+    @include inline-list;
+    padding: 1rem 0.5rem;
+    background-color: color(text);
+    color: color(background);
+    border-radius: $roundness * 0.5;
+    border: 0.1em solid rgba(color(background), 0.1);
+    z-index: 1000;
+    opacity: 0;
+    animation: nav--mobile__content 400ms easing(out-expo) forwards;
+    transform-origin: top right;
+    position: absolute;
+    top: 100%;
+    right: 2rem;
 
-		&[data-state="open"] {
-			opacity: 1;
-		}
-	}
+    &[data-state="open"] {
+      opacity: 1;
+    }
+  }
 
-	&__item {
-	}
+  &__item {
+  }
 
-	&__link {
-		@include font-size(p);
-		display: block;
-		padding: 0.5em 1em;
-		margin: 0.5em;
-		font-weight: 500;
-		color: rgba(color(background), 0.8);
-		border-radius: $roundness * 0.5;
+  &__link {
+    @include font-size(p);
+    display: block;
+    padding: 0.5em 1em;
+    margin: 0.5em;
+    font-weight: 500;
+    color: rgba(color(background), 0.8);
+    border-radius: $roundness * 0.5;
 
-		&.active {
-			background-color: rgba(color(background), 0.05);
-		}
-	}
+    &.active {
+      background-color: rgba(color(background), 0.05);
+    }
+  }
 }
 
 @keyframes nav--mobile__content {
-	0% {
-		opacity: 0;
-		transform: scale(0.9);
-	}
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
 
-	100% {
-		opacity: 1;
-		transform: translate(0) scale(1);
-	}
+  100% {
+    opacity: 1;
+    transform: translate(0) scale(1);
+  }
 }
 
 .menu--mobile {
-	&__trigger {
-		@extend .flex-center;
+  &__trigger {
+    @extend .flex-center;
 
-		@include device(desktop) {
-			display: none;
-		}
-	}
+    @include device(desktop) {
+      display: none;
+    }
+  }
 }

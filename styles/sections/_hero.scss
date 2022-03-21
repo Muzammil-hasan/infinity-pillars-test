@@ -1,26 +1,30 @@
 .hero {
-	min-height: 100vh;
-	padding: 5rem 25rem;
-	@include flex(flex-start, $direction: column);
-	text-align: center;
+  min-height: 100vh;
+  padding: 10rem padding(section) 0;
+  @include flex(flex-start, $direction: column);
+  text-align: center;
 
-	&__title {
-		margin-bottom: 1rem;
-		font-weight: 600;
-		line-height: 1.2;
-	}
+  &__title {
+    @include font-size(h1);
+    margin-bottom: 1rem;
+    font-weight: 600;
+    line-height: 1;
+  }
 
-	&__subtitle {
-		@include font-size(h5);
-		color: lighten(color(text), 25%);
-		margin-bottom: 3rem;
-	}
+  &__subtitle {
+    @include font-size(h6);
+    color: lighten(color(text), 25%);
+    margin-bottom: 3rem;
+    line-height: 1.5;
+    padding: 0 6rem;
+    font-weight: 300;
+  }
 
-	&__ctas {
-		@include flex(center);
+  &__ctas {
+    @include flex(center);
 
-		> button {
-			margin: 0 1rem;
-		}
-	}
+    > button {
+      margin: 0 1rem;
+    }
+  }
 }

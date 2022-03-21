@@ -1,5 +1,5 @@
 .page_dashboard {
-  padding: 2.5rem $page-padding;
+  padding: 2.5rem padding(page);
 
   &__title {
     @include flex(space-between);

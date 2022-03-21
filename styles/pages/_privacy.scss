@@ -1,4 +1,4 @@
 .page--privacy {
   @include font-size(h5);
-  padding: 2.5rem $page-padding;
+  padding: 2.5rem padding(page);
 }

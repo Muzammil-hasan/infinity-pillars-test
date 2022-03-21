@@ -1,6 +1,6 @@
 .page_contact {
   @include flex(center, stretch);
-  padding: 2.5rem $page-padding 5rem;
+  padding: 2.5rem padding(page) 5rem;
   background-color: color(background);
   width: 100%;
   min-height: 100vh;

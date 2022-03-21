@@ -1,14 +1,14 @@
 .page--blog {
   width: 100%;
-  padding: 2.5rem $page-padding;
+  padding: 2.5rem padding(page);
 }
 
 .page--post {
   @include font-size(h5);
-  padding: 5rem $page-padding * 3;
+  padding: 5rem padding(page) * 3;
 
   @include device(mobileAndTablet) {
-    padding: 2.5rem $page-padding;
+    padding: 2.5rem padding(page);
   }
 }
 

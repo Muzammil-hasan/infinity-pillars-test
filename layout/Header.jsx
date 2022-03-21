@@ -1,17 +1,17 @@
 import React from "react";
-import Nav from "@components/Nav";
-import Logo from "../components/Logo";
+import Nav from "../components/Nav";
 
 const Header = () => {
 	return (
 		<header className='header'>
-			<Logo />
-
 			<Nav />
 
-			<div className='header__cta'>
+			<div className='header__ctas'>
+				<a href='/' className='portfolio_button--secondary portfolio_button--small'>
+					Resume
+				</a>
 				<a href='/' className='portfolio_button--primary portfolio_button--small'>
-					Contact me
+					Let's talk
 				</a>
 			</div>
 		</header>
