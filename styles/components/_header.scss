@@ -2,12 +2,30 @@
   @include flex(space-between);
   height: $header-height;
   padding: 0 padding(header);
+  background-color: color(light-blue);
+  box-shadow: 0px 0.3rem 0px color(primary);
 
-  &__ctas {
-    @include flex(center);
+  &_logo {
+    @include device(mobileAndTablet) {
+      display: none;
+    }
+  }
 
-    > a:last-child {
-      margin-left: 0.75em;
+  &_ctas {
+    span {
+      svg {
+        width: 2rem;
+        height: 2rem;
+        color: color(primary);
+      }
+
+      &:first-child {
+        margin-right: 1.5rem;
+      }
+    }
+
+    @include device(mobileAndTablet) {
+      display: none;
     }
   }
 }

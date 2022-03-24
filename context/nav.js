@@ -1,6 +1,6 @@
 export const links = {
-	"/": "Home",
-	"/products": "Products And Services",
-	"/projects": "Projects",
-	"/about": "About",
+  "/": "Courses",
+  "/about": "About us",
+  "/blog": "blog",
+  "/contact": "Contact us",
 };

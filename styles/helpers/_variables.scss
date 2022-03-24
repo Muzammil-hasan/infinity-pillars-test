@@ -5,8 +5,8 @@ Fonts
 */
 
 $fonts: (
-  "heading": "Product sans",
-  "body": "Product sans",
+  "heading": "Inter",
+  "body": "Inter",
 );
 
 /*
@@ -16,14 +16,16 @@ Colors
 */
 
 $colors: (
-  "main": #1a73e8,
-  "text": #3c4043,
+  "main": #2d498a,
+  "text": #000000,
   "background": #ffffff,
   "gmail": #fff0f0,
   "github": #e3e3e3,
   "linkedin": #e5f1f8,
-  "light-blue": "#EAF3FA",
-  "light-pink": "#FEF3EA",
+  "light-blue": #f7fafd,
+  "light-pink": #fef3ea,
+  "primary": #2d498a,
+  "accent": #f38537,
 );
 
 /*
@@ -79,7 +81,7 @@ Others
 */
 
 $global-prefix: "portfolio";
-$header-height: 10vh;
+$header-height: 6rem;
 $roundness: 1em;
 
 /*-------------------------
