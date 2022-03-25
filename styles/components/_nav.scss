@@ -1,6 +1,20 @@
 .header_nav {
   flex-grow: 1;
 
+  &__hamburger {
+    @extend .del-default;
+    display: none;
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    @include device(mobileAndTablet) {
+      display: inline-block;
+    }
+  }
+
   &__list {
     @extend .inline-list;
     @extend .flex-start;

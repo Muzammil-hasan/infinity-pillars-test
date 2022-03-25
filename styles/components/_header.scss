@@ -7,7 +7,7 @@
 
   &_logo {
     @include device(mobileAndTablet) {
-      display: none;
+      width: 15rem;
     }
   }
 

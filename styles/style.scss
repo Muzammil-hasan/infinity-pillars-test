@@ -20,6 +20,7 @@
 # Base
 --------------------------------------------------------------*/
 @import "base";
+@import "./base/buttons";
 
 /*--------------------------------------------------------------
 # Components
@@ -28,19 +29,6 @@
 @import "components/footer";
 @import "components/nav";
 @import "components/mobile-nav";
-@import "components/noise";
-@import "components/checkout";
-@import "components/project";
-
-/*--------------------------------------------------------------
-# Sections
---------------------------------------------------------------*/
-@import "sections/hero";
-@import "sections/process";
-@import "sections/products";
-@import "sections/services";
-@import "sections/team";
-@import "sections/projects";
 
 /*--------------------------------------------------------------
 # Pages
@@ -48,10 +36,3 @@
 @import "pages/home";
 @import "pages/base";
 @import "pages/about";
-@import "pages/contact";
-@import "pages/account";
-@import "pages/products-and-services";
-@import "pages/dashboard";
-@import "pages/product";
-@import "pages/privacy";
-@import "pages/blog";

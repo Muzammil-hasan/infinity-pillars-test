@@ -7,7 +7,7 @@ const About = () => {
         <h1 className="page_about__content-title">About us</h1>
       </div>
 
-      <div className="page_about__main">
+      <section className="page_about__main">
         <div className="page_about__main-content">
           <h2>Who we are</h2>
           <p>
@@ -27,9 +27,9 @@ const About = () => {
         <div className="page_about__main-image">
           <img src="images/Directory-Central-America-CAG.jpg" alt="" />
         </div>
-      </div>
+      </section>
 
-      <div className="page_about__main page_about__main--second">
+      <section className="page_about__main page_about__main--second">
         <div className="page_about__main-image">
           <img src="images/school-2.jpg" alt="" />
         </div>
@@ -38,31 +38,41 @@ const About = () => {
           <h2>We Believe</h2>
           <ul>
             <li>
-              Our students, as individuals, have unique intellectual, social,
-              emotional and physical characteristics and needs
+              <p>
+                Our students, as individuals, have unique intellectual, social,
+                emotional and physical characteristics and needs
+              </p>
             </li>
             <li>
-              AII students can learn, and they learn most effectively when they
-              are actively engaged in the learning process when they are faced
-              with challenging expectations and when they are held to clearly
-              defined standards of excellence
+              <p>
+                AII students can learn, and they learn most effectively when
+                they are actively engaged in the learning process when they are
+                faced with challenging expectations and when they are held to
+                clearly defined standards of excellence
+              </p>
             </li>
             <li>
-              Learning should take place within a physically and psychologically
-              safe environment
+              <p>
+                Learning should take place within a physically and
+                psychologically safe environment
+              </p>
             </li>
             <li>
-              AII members of the school community, which includes faculty,
-              staff, parents, and students share the responsibility far
-              accomplishing our mission
+              <p>
+                AII members of the school community, which includes faculty,
+                staff, parents, and students share the responsibility far
+                accomplishing our mission
+              </p>
             </li>
             <li>
-              Continuous improvement is essential to providing quality
-              educational opportunities far our students.
+              <p>
+                Continuous improvement is essential to providing quality
+                educational opportunities far our students.
+              </p>
             </li>
           </ul>
         </div>
-      </div>
+      </section>
     </div>
   );
 };
